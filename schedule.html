@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lashed by Tiff - Booking</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVVkXjvVfH3YW+ahV1nv28fFkdM+MdUWJRCJR8eaU/wQXqOJpyb7GKoprB1ekpQuZ1ZGWUweJ1C0O1zXK50fKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --pink: #e91e63;
+      --dark: #000;
+      --pink-dark: #d81b60;
+      --pink-light: #f06292;
+      --stripe-light: rgba(255,255,255,0.1);
+    }
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--dark); color: #fff; }
+    /* Banner Styles */
+    .banner {
+      background: linear-gradient(135deg, var(--pink-dark), var(--pink-light));
+      text-align: center;
+    }
+    .banner .placeholder-img {
+      width: 120px;
+      height: 120px;
+      background-color: rgba(255,255,255,0.2);
+      border-radius: .5rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: .5rem;
+      color: #fff;
+    }
+    .stripe {
+      background-color: var(--stripe-light);
+      padding: 1rem;
+      margin: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .stripe:last-child { border-bottom: none; }
+    .stripe i { color: var(--pink); margin-right: .5rem; }
+    .section-title { font-size: 1.5rem; font-weight: 600; margin-bottom: .5rem; }
+    .hours-list span { display: inline-block; width: 120px; margin: .25rem; }
+    /* Category & Footer Styles */
+    .text-pink { color: var(--pink); }
+    .list-group-item { background: #111; border: none; padding: .75rem 1.25rem; }
+    .btn-select { background: var(--pink); border: none; color: #fff; padding: .5rem 1rem; border-radius: .25rem; }
+    footer { padding: 2rem 0; }
+  </style>
+</head>
+<body>
+  <!-- Banner Section -->
+  <section class="banner py-5">
+    <div class="container mb-4">
+      <h1 class="mb-3">Lashed by Tiff!</h1>
+      <div>
+        <div class="placeholder-img">Image 1</div>
+        <div class="placeholder-img">Image 2</div>
+        <div class="placeholder-img">Image 3</div>
+      </div>
+    </div>
+    <div class="stripe">
+      <i class="fab fa-instagram"></i>@lashedbytiff_llc | <i class="fas fa-envelope"></i>tiffanysoriano5@icloud.com | <i class="fas fa-phone"></i>(973) 400-0244
+    </div>
+    <div class="stripe text-center">
+      <h2 class="section-title">HELLO PRETTIES!</h2>
+      <p>Welcome to our booking site</p>
+    </div>
+    <div class="stripe text-center">
+      <small>Please read all policies prior to booking</small>
+    </div>
+    <div class="stripe hours-list text-center">
+      <span><strong>Mon</strong> 9AM–8PM</span>
+      <span><strong>Tue</strong> Closed</span>
+      <span><strong>Wed</strong> 9AM–8PM</span><br>
+      <span><strong>Thu</strong> 9AM–8PM</span>
+      <span><strong>Fri</strong> 9AM–8PM</span>
+      <span><strong>Sat</strong> 9AM–8PM</span>
+      <span><strong>Sun</strong> 9AM–8PM</span>
+    </div>
+    <div class="stripe">
+      <i class="fas fa-exclamation-circle"></i>
+      Please come to your appointment with clean lashes—no leftover mascara or glue—and no lash extensions. If you’re coming in for a refill and it is my work, also come with a clean face. Absolutely no makeup or moisturizer! Dirty lashes incur a $10 lash bath fee.
+    </div>
+    <div class="stripe">
+      <i class="fas fa-cash-register"></i>
+      Cash only! Electronic payments incur a $10 fee. Squeeze-ins are $20; same-day squeeze-ins are $45.
+    </div>
+    <div class="stripe">
+      <i class="fas fa-clock"></i>
+      6–10 min late: $10 fee. >15 min: appointment canceled. No extra guests. Emergencies: $10 fee.
+    </div>
+    <div class="stripe">
+      <i class="fas fa-lock"></i>
+      $10 non-refundable deposit required. New deposit if no 48h notice. No deposit = no appointment.
+    </div>
+    <div class="stripe">
+      <i class="fas fa-ban"></i>
+      Cancel/reschedule ≥48h in advance or 50% fee applies; unpaid balance blocks booking.
+    </div>
+    <div class="stripe">
+      <i class="fas fa-undo"></i>
+      No refunds.
+    </div>
+    <div class="stripe">
+      <h3 class="section-title">A+ Lash Trainings</h3>
+      <p>Courses, ebooks, kits, and more available.</p>
+    </div>
+    <div class="stripe">
+      <h3 class="section-title">We Love Selfies</h3>
+      <p>Snap, send, and tag us @lashedbytiff_llc!</p>
+    </div>
+    <div class="stripe text-center">
+      <strong>Book your desired appointment below</strong>
+    </div>
+  </section>
+
+  <!-- Category Selection -->
+  <main class="container py-5">
+    <section class="text-center">
+      <h4 class="mb-4"><i class="fas fa-list"></i> Select Category</h4>
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Facials <button class="btn-select">Select</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Lash Extensions <button class="btn-select">Select</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Lash Extensions Refill <button class="btn-select">Select</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Lash Training <button class="btn-select">Select</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Wax Services <button class="btn-select">Select</button>
+        </li>
+      </ul>
+      <a href="#" class="d-block mt-3 text-pink small">Show All Appointments</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-muted py-4">
+    <p>Powered by <a href="https://acuityscheduling.com" class="text-pink" target="_blank">acuity:scheduling</a></p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

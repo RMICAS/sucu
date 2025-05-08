@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Lashartist | Linktree</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVVkXjvVfH3YW+ahV1nv28fFkdM+MdUWJRCJR8eaU/wQXqOJpyb7GKoprB1ekpQuZ1ZGWUweJ1C0O1zXK50fKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-weight: bold;
+    }
+    .bg-cover {
+      background: url('bg.png') no-repeat center center;
+      background-size: cover;
+    }
+    .overlay {
+      height: 100%;
+      color: #fff;
+    }
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+    
+    }
+    .btn-custom {
+      border-radius: 50px;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-color: #BFA100;
+      box-shadow: 0 4px 15px rgba(191, 162, 0, 0.233);
+      transition: all 0.3s ease;
+    }
+    .btn-custom:hover {
+      box-shadow: 0 6px 20px rgba(191, 162, 0, 0.377);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-cover">
+    <div class="overlay d-flex flex-column align-items-center justify-content-center text-center p-4">
+      <!-- Profile Section -->
+      <img src="logo.png" alt="Profile" class="profile-img mb-3">
+      <h1 class="h4 mb-1">SUCU <i class="fas fa-check-circle text-primary"></i></h1>
+      <p class="mb-4 small text-uppercase">Lashes | Hair | Beauty</p>
+      <!-- Links List -->
+      <div class="d-flex flex-column align-items-center w-100">
+        <a href="services.html" class="btn btn-outline-light btn-custom w-75 mb-2">
+          <i class="fas fa-calendar-plus me-2"></i>
+          Services
+        </a>
+        <a href="#" class="btn btn-outline-light btn-custom w-75 mb-2">
+          <i class="fas fa-shopping-bag me-2"></i>
+          Shop
+        </a>
+        <a href="gallery.html" class="btn btn-outline-light btn-custom w-75 mb-2">
+          <i class="fas fa-hand-holding-heart me-2"></i>
+          Gallery
+        </a>
+       
+        <a href="instagram.html" class="btn btn-outline-light btn-custom w-75 mb-2">
+          <i class="fab fa-instagram me-2"></i>
+          Instagram
+        </a>
+        <a href="tiktok.html" class="btn btn-outline-light btn-custom w-75 mb-2">
+          <i class="fab fa-tiktok me-2"></i>
+          TikTok
+        </a>
+        <a href="contact.html" class="btn btn-outline-light btn-custom w-75 mb-2">
+          <i class="fas fa-store me-2"></i>
+          Contact
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

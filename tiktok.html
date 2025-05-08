@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SUCU - TikTok</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #BFA100;
+            --pink: #FF69B4;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            min-height: 100vh;
+        }
+        .social-section {
+            background: var(--pink);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(255, 105, 180, 0.3);
+        }
+        .social-title {
+            color: white;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .back-btn {
+            color: var(--pink);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .back-btn:hover {
+            color: #ff1493;
+        }
+        .page-title {
+            color: var(--pink);
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .tiktok-feed {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .profile-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .profile-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--gold);
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: white;
+        }
+        .follow-btn {
+            background-color: var(--gold);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .follow-btn:hover {
+            background-color: #a68a00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(191, 161, 0, 0.3);
+            color: white;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .video-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 9/16;
+        }
+        .video-item iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+        
+        <h1 class="text-center page-title">Follow Us on TikTok</h1>
+
+        <div class="social-section">
+            <div class="profile-info">
+                <h2 class="social-title">
+                    <i class="fab fa-tiktok"></i> @sucubeauty
+                </h2>
+                <p>✨ Beauty Tips & Transformations ✨</p>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Videos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100K</div>
+                        <div class="stat-label">Followers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2M</div>
+                        <div class="stat-label">Likes</div>
+                    </div>
+                </div>
+                <a href="https://tiktok.com/@sucubeauty" target="_blank" class="follow-btn">
+                    <i class="fab fa-tiktok me-2"></i> Follow Us
+                </a>
+            </div>
+
+            <div class="tiktok-feed">
+                <!-- TikTok Feed Embed -->
+                <div class="ratio ratio-16x9">
+                    <iframe 
+                        src="https://www.tiktok.com/embed/@sucubeauty" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        allowtransparency="true">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Videos Grid -->
+        <div class="social-section">
+            <h2 class="social-title">
+                <i class="fas fa-video"></i> Recent Videos
+            </h2>
+            <div class="video-grid">
+                <!-- Example videos - Replace with actual TikTok embeds -->
+                <div class="video-item">
+                    <iframe 
+                        src="https://www.tiktok.com/embed/v2/example1" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        allowtransparency="true">
+                    </iframe>
+                </div>
+                <div class="video-item">
+                    <iframe 
+                        src="https://www.tiktok.com/embed/v2/example2" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        allowtransparency="true">
+                    </iframe>
+                </div>
+                <div class="video-item">
+                    <iframe 
+                        src="https://www.tiktok.com/embed/v2/example3" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        allowtransparency="true">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

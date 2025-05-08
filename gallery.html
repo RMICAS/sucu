@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SUCU - Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #BFA100;
+            --pink: #FF69B4;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            min-height: 100vh;
+        }
+        .gallery-section {
+            background: var(--pink);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(255, 105, 180, 0.3);
+        }
+        .gallery-title {
+            color: white;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-item-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            padding: 15px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover .gallery-item-overlay {
+            opacity: 1;
+        }
+        .back-btn {
+            color: var(--pink);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .back-btn:hover {
+            color: #ff1493;
+        }
+        .page-title {
+            color: var(--pink);
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .category-btn {
+            background-color: var(--gold);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+        .category-btn:hover {
+            background-color: #a68a00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(191, 161, 0, 0.3);
+        }
+        .category-btn.active {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+        
+        <h1 class="text-center page-title">Our Gallery</h1>
+
+        <!-- Category Filters -->
+        <div class="text-center mb-4">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="lashes">Lashes</button>
+            <button class="category-btn" data-category="brows">Brows</button>
+            <button class="category-btn" data-category="hair">Hair</button>
+        </div>
+
+        <!-- Gallery Sections -->
+        <div class="gallery-section">
+            <h2 class="gallery-title">
+                <i class="fas fa-images"></i> Recent Work
+            </h2>
+            <div class="gallery-grid">
+                <!-- Example gallery items - Replace with your actual images -->
+                <div class="gallery-item" data-category="lashes">
+                    <img src="https://via.placeholder.com/300" alt="Lash Work">
+                    <div class="gallery-item-overlay">
+                        <h5>Classic Lashes</h5>
+                        <p>Natural and elegant</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="brows">
+                    <img src="https://via.placeholder.com/300" alt="Brow Work">
+                    <div class="gallery-item-overlay">
+                        <h5>Brow Lamination</h5>
+                        <p>Perfectly shaped</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="hair">
+                    <img src="https://via.placeholder.com/300" alt="Hair Work">
+                    <div class="gallery-item-overlay">
+                        <h5>Wig Installation</h5>
+                        <p>Flawless finish</p>
+                    </div>
+                </div>
+                <!-- Add more gallery items as needed -->
+            </div>
+        </div>
+
+        <!-- Instagram Feed Section -->
+        <div class="gallery-section">
+            <h2 class="gallery-title">
+                <i class="fab fa-instagram"></i> Instagram Feed
+            </h2>
+            <div class="gallery-grid">
+                <!-- Instagram feed will be loaded here -->
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300" alt="Instagram Post">
+                    <div class="gallery-item-overlay">
+                        <h5>Follow us on Instagram</h5>
+                        <p>@sucubeauty</p>
+                    </div>
+                </div>
+                <!-- Add more Instagram items -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Category filter functionality
+        document.querySelectorAll('.category-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.category-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const category = button.dataset.category;
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

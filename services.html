@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SUCU - Services & Booking</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #BFA100;
+            --pink: #FF69B4;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+        }
+        .service-section {
+            background: var(--pink);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(255, 105, 180, 0.3);
+        }
+        .service-title {
+            color: white;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .service-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .service-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+        .btn-book-now {
+            background-color: var(--gold);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn-book-now:hover {
+            background-color: #a68a00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(191, 161, 0, 0.3);
+        }
+        .back-btn {
+            color: var(--pink);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .back-btn:hover {
+            color: #ff1493;
+        }
+        .page-title {
+            color: var(--pink);
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+        
+        <h1 class="text-center page-title">Our Services</h1>
+
+        <!-- Eyelashes Section -->
+        <div class="service-section">
+            <h2 class="service-title">
+                <i class="fas fa-eye"></i> EYELASHES
+            </h2>
+            <ul class="service-list">
+                <li>Classic <a href="booking.html?service=Classic Lashes" class="btn btn-book-now">Book Now</a></li>
+                <li>Mixed <a href="booking.html?service=Mixed Lashes" class="btn btn-book-now">Book Now</a></li>
+                <li>Volume <a href="booking.html?service=Volume Lashes" class="btn btn-book-now">Book Now</a></li>
+                <li>Glam Volume <a href="booking.html?service=Glam Volume Lashes" class="btn btn-book-now">Book Now</a></li>
+                <li>Lash Refills <a href="booking.html?service=Lash Refills" class="btn btn-book-now">Book Now</a></li>
+                <li>Lash Removal <a href="booking.html?service=Lash Removal" class="btn btn-book-now">Book Now</a></li>
+                <li>Lash Lift <a href="booking.html?service=Lash Lift" class="btn btn-book-now">Book Now</a></li>
+                <li>Lash Tint <a href="booking.html?service=Lash Tint" class="btn btn-book-now">Book Now</a></li>
+                <li>Bottom Lashes <a href="booking.html?service=Bottom Lashes" class="btn btn-book-now">Book Now</a></li>
+            </ul>
+            <small class="text-white">✨ Enjoy a relaxing massage upon request while getting your lashes done!</small>
+        </div>
+
+        <!-- Eyebrows Section -->
+        <div class="service-section">
+            <h2 class="service-title">
+                <i class="fas fa-brush"></i> EYEBROWS
+            </h2>
+            <ul class="service-list">
+                <li>Brow Lamination <a href="booking.html?service=Brow Lamination" class="btn btn-book-now">Book Now</a></li>
+                <li>Brow Shaping (Waxing & Tweezing) <a href="booking.html?service=Brow Shaping" class="btn btn-book-now">Book Now</a></li>
+                <li>Brow Tint <a href="booking.html?service=Brow Tint" class="btn btn-book-now">Book Now</a></li>
+            </ul>
+        </div>
+
+        <!-- Hair Section -->
+        <div class="service-section">
+            <h2 class="service-title">
+                <i class="fas fa-cut"></i> HAIR
+            </h2>
+            <h3 class="h6 mb-2 text-white">Installation</h3>
+            <ul class="service-list">
+                <li>Wig Install (Glue Adhesive, Sew-in, Glueless) <a href="booking.html?service=Wig Install" class="btn btn-book-now">Book Now</a></li>
+            </ul>
+
+            <h3 class="h6 mb-2 mt-3 text-white">Styling</h3>
+            <ul class="service-list">
+                <li>Straightening <a href="booking.html?service=Hair Straightening" class="btn btn-book-now">Book Now</a></li>
+                <li>Braiding <a href="booking.html?service=Hair Braiding" class="btn btn-book-now">Book Now</a></li>
+                <li>Curling <a href="booking.html?service=Hair Curling" class="btn btn-book-now">Book Now</a></li>
+                <li>Side Part Swoop <a href="booking.html?service=Side Part Swoop" class="btn btn-book-now">Book Now</a></li>
+            </ul>
+
+            <h3 class="h6 mb-2 mt-3 text-white">Coloring</h3>
+            <ul class="service-list">
+                <li>Full Black Application <a href="booking.html?service=Full Black Application" class="btn btn-book-now">Book Now</a></li>
+                <li>Partial Highlights <a href="booking.html?service=Partial Highlights" class="btn btn-book-now">Book Now</a></li>
+            </ul>
+
+            <h3 class="h6 mb-2 mt-3 text-white">Customizing</h3>
+            <ul class="service-list">
+                <li>Plucking Method <a href="booking.html?service=Plucking Method" class="btn btn-book-now">Book Now</a></li>
+                <li>Bleaching the Knots <a href="booking.html?service=Bleaching the Knots" class="btn btn-book-now">Book Now</a></li>
+            </ul>
+
+            <h3 class="h6 mb-2 mt-3 text-white">Treatment</h3>
+            <ul class="service-list">
+                <li>Washing <a href="booking.html?service=Hair Washing" class="btn btn-book-now">Book Now</a></li>
+                <li>Conditioning <a href="booking.html?service=Hair Conditioning" class="btn btn-book-now">Book Now</a></li>
+                <li>Straightening <a href="booking.html?service=Hair Treatment Straightening" class="btn btn-book-now">Book Now</a></li>
+            </ul>
+
+            <h3 class="h6 mb-2 mt-3 text-white">Wig Making</h3>
+            <ul class="service-list">
+                <li>Machine & Hand-Made <a href="booking.html?service=Wig Making" class="btn btn-book-now">Book Now</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
